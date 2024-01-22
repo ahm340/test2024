@@ -1,10 +1,15 @@
+import { useState } from "react";
+
 export default function Home() {
-function getRandomInt(){
-  return Math.floor(Math.random() * 10);
-}
+  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 10));
+
+  function getRandomInt() {
+    return randomNumber;
+  }
+
   return (
     <main>
-the Numbber is : {getRandomInt()}
+      the Number is : {getRandomInt()}
     </main>
   );
 }
